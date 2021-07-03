@@ -9,7 +9,7 @@ export default function Chatbot() {
     const BOT_USER = {
         _id: 2,
         name: 'Healthical Bot',
-        // avatar: require("../../Images/chatbotavatar.png")
+        avatar: require("../Images/chatbotavatar.png")
 
     };
     const [messages, setMessages] = useState([{

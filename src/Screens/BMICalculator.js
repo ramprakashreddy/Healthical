@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { View, StyleSheet, Text, TouchableOpacity, ScrollView, Image, Pressable, ActivityIndicator } from 'react-native'
 import { Input } from "../Components/Input";
 import { Width, Height, showNotification } from "../Utils/Utils";
+import * as Linking from "expo-linking";
 
 
 export default function BMICalculator({ navigation }) {
