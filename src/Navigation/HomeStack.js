@@ -8,7 +8,6 @@ import * as firebase from 'firebase';
 import ChatBot from "../Screens/ChatBot";
 import BMICalculator from "../Screens/BMICalculator";
 import DietList from "../Screens/DietList";
-import FoodDetail from "../Screens/FoodDetail";
 
 
 
@@ -26,11 +25,43 @@ export default function HomeStack() {
                 }}
             >
                 <Stack.Screen name="Home" component={Home}
+                    options={{
+                        headerRight: () => (
+
+                            <TouchableOpacity
+
+                                onPress={async () => {
+
+                                    try {
+                                        await firebase.auth().signOut()
+                                    } catch (e) {
+                                        console.error(e)
+                                    }
+
+                                }}
+                            >
+                                <Icon
+                                    name="logout"
+                                    color={"#eaf1f9"}
+                                    size={30}
+                                    style={{ marginRight: 20 }}
+                                />
+
+                            </TouchableOpacity>
+
+                        )
+                    }}
                 />
                 <Stack.Screen name="ChatBot" component={ChatBot}
                     options={{ headerTitle: "Healthical Bot" }}
                 />
-                
+                <Stack.Screen name="BMICalculator" component={BMICalculator}
+                    options={{ headerTitle: "BMI Calculator" }}
+                />
+                <Stack.Screen name="DietList" component={DietList}
+                    options={{ headerTitle: "Diet List" }}
+                />
+
             </Stack.Navigator>
         </NavigationContainer>
     )
