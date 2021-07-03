@@ -84,7 +84,18 @@ export default function BMICalculator({ navigation }) {
                     source={require("../Images/Youtube.png")}
                     labelText="Watch a video"
                     onPress={() => {
-                        //YT CALL
+
+                        if (BMIVal < 18.5) {
+                            Linking.openURL("https://youtube.com/playlist?list=PLmTVoL6WRflnOVYfGeVyjFr3cC9bAy9K6")
+
+                        } else if (BMIVal >= 18.5 && BMIVal <= 24.9) {
+
+                            Linking.openURL("https://youtube.com/playlist?list=PLmTVoL6WRflkNT3OiQpgy0o5g3LwjbRoO")
+                        } else {
+                            Linking.openURL("https://youtube.com/playlist?list=PLmTVoL6WRfll1BTzJ7_4W5rUhZF6Zjtjc")
+
+                            //High BMI
+                        }
 
                     }}
                     style={{ width: "64%", height: "70%", resizeMode: "contain" }}
