@@ -8,6 +8,7 @@ import * as firebase from 'firebase';
 import ChatBot from "../Screens/ChatBot";
 import BMICalculator from "../Screens/BMICalculator";
 import DietList from "../Screens/DietList";
+import FoodDetail from "../Screens/FoodDetail";
 
 
 
@@ -61,7 +62,9 @@ export default function HomeStack() {
                 <Stack.Screen name="DietList" component={DietList}
                     options={{ headerTitle: "Diet List" }}
                 />
-
+                <Stack.Screen name="FoodDetail" component={FoodDetail}
+                    options={{ headerTitle: "Recipe " }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )

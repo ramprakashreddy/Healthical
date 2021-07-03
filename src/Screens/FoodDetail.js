@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Text, View, Image, ScrollView, FlatList, ActivityIndicator } from "react-native";
 import axios from "axios";
 import { Height, Width } from "../Utils/Utils";
+import { HtmlText } from "@e-mine/react-native-html-text";
 
 export default function FoodDetails({ navigation, route }) {
 
@@ -55,8 +56,10 @@ export default function FoodDetails({ navigation, route }) {
                     <View
                         style={{ marginTop: 10, flex: 1, backgroundColor: "#ffffff", padding: "2.4%" }}>
                         <Text style={{ fontSize: 22, textAlign: 'left', fontWeight: 'bold', marginBottom: 10 }}>To make {name}</Text>
-                        <Text style={{ fontSize: 18, color: '#263a6c', fontWeight: 'bold' }}>{instructions}</Text>
 
+                        <HtmlText style={{ fontSize: 18, color: '#263a6c', fontWeight: 'bold' }}>
+                            {instructions}
+                        </HtmlText>
 
 
                     </View>
