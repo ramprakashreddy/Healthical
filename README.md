@@ -37,7 +37,7 @@ Features
 :prince:
 
 [Riya S](https://github.com/Rrs-4817)
-:massage_woman:
+:trollface:
 
 [Hardik Khandelwal](https://github.com/hardik-kh)
 :man_judge:
